@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbeaufil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:43:41 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/07/23 12:05:14 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/07/27 12:52:26 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 
 # include <iostream>
 
-class	Fix {
+class	Fixed {
 	private:
 		int					_num;
-		const static int	_nBits;
+		const static int	_nBits = 8;
 	public:
-		Fix(void); // constructor
-		Fix(Fix &t); // copy constructor
-		~Fix(void); // destructor
-		Fix 	operator=(const Fix& t); // affection operator overload
+		Fixed(void); // constructor
+		Fixed(Fixed &t); // copy constructor
+		~Fixed(void); // destructor
+		Fixed 	&operator=(const Fixed& t); // affection operator overload
 
-		int		getRawBits(void);
+		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
-}
+};
 
 #endif
