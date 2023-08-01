@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:56:55 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/01 12:31:17 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/08/01 12:37:45 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,7 @@ Fixed::~Fixed(void) {
 Fixed::Fixed(const Fixed &t) {
 	if (this->_verbose)
 		std::cout << "Copy constructor called" << std::endl;
-	// this->setRawBits(t.getRawBits());
-	*this = t; // to write -> "copy assignement [...] called"
-}
-
-// assignement operator
-Fixed	&Fixed::operator=(const Fixed& t) {
-	if (this->_verbose)
-		std::cout << "Copy assignement operator called" << std::endl;
-	if (this != &t) {
-		this->_num = t.getRawBits();
-	}
-	return *this;
+	*this = t;
 }
 
 // Get && Set:
@@ -69,10 +58,7 @@ int	Fixed::toInt(void) const {
 	return this->_num >> this->_nBits; // binary operator
 }
 
-// Insert formatted output
-std::ostream &operator<<(std::ostream &o, Fixed const &i) {
-	return o << i.toFloat();
-}
+/* ================ utils ================ */
 
 int	ft_pow(int n, int pow) {
 	int	res = 1;
