@@ -6,19 +6,11 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 06:32:07 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/01 15:08:46 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/08/01 16:55:56 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
-/*
-int main ( void ) {
-
-
-    return 0;
-}
-*/
 
 int main(void) {
     Fixed a(10);
