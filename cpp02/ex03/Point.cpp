@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 17:11:26 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/02 10:45:54 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/08/14 09:18:39 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ float	ft_abs(float n) {
 float	area(const Point &p1, const Point &p2, const Point &p3)
 {
 	float	x1 = p1.getX().toFloat();
+	// std::cout << p1.getX() << std::endl;
 	float	y1 = p1.getY().toFloat();
 	float	x2 = p2.getX().toFloat();
 	float	y2 = p2.getY().toFloat();
@@ -73,7 +74,8 @@ float	area(const Point &p1, const Point &p2, const Point &p3)
 	return ft_abs((x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2))/2.0);
 }
 
-bool	bsp(Point const a, Point const b, Point const c, Point const point) {
+bool	bsp(Point const &a, Point const &b, Point const &c, Point const &point) {
+	// std::cout << a.getX() << std::endl;	
 	float	A = area(a, b, c); // ABC
 	float	A1 = area(point, b, c); // PBC
 	float	A2 = area(a, point, c); // PAC

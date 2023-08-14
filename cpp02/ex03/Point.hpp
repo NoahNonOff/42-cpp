@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 17:09:58 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/02 10:04:51 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/08/14 09:18:52 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ class Point {
 
 float	ft_abs(float n);
 float	area(const Point &p1, const Point &p2, const Point &p3);
-bool	bsp( Point const a, Point const b, Point const c, Point const point);
+bool	bsp( Point const &a, Point const &b, Point const &c, Point const &point);
 
 #endif
