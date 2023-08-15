@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/14 15:14:07 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/15 19:04:41 by nbeaufil         ###   ########.fr       */
+/*   Created: 2023/08/15 16:52:10 by nbeaufil          #+#    #+#             */
+/*   Updated: 2023/08/15 19:04:48 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int	main(void)
-{
-	ScavTrap	robot("gigaChad");
+# include "ClapTrap.hpp"
 
-	robot.attack("your mom");
-	robot.attack("a guy");
-	robot.takeDamage(45);
-	robot.takeDamage(62);
-	robot.takeDamage(36);
-	robot.guardGate();
-	return (0);
-}
+class ScavTrap : public ClapTrap {
+	protected:
+		bool	_guardGate;
+		const static bool	_verbose = false;
+
+	public:
+		ScavTrap();
+		ScavTrap(const std::string name);
+		~ScavTrap();
+		ScavTrap(const ScavTrap &t);
+		ScavTrap 	&operator=(const ScavTrap& t);
+
+		void	attack(const std::string &target);
+		void	guardGate(void);
+};
+
+#endif

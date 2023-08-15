@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 15:14:30 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/15 17:33:56 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/08/14 16:50:21 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ void		ClapTrap::setDamage(const int damage) { this->_damage = damage; }
 
 /* ----------------------------------- canonique ----------------------------------- */
 
-ClapTrap::ClapTrap() : _name("chatGpt"), _hp(100), _energy(50), _damage(20) {
+ClapTrap::ClapTrap() : _name("chatGpt"), _hp(10), _energy(10), _damage(0) {
 	if (this->_verbose)
 		std::cout << "[ClapTrap] default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string name) : _name(name), _hp(100), _energy(50), _damage(20) {
+ClapTrap::ClapTrap(const std::string name) : _name(name), _hp(10), _energy(10), _damage(0) {
 	if (this->_verbose)
-		std::cout << "[ClapTrap] named constructor called" << std::endl;
+		std::cout << "[ClapTrap] default constructor called" << std::endl;
 }
 
 ClapTrap::~ClapTrap() {
@@ -58,7 +58,6 @@ ClapTrap 	&ClapTrap::operator=(const ClapTrap& t) {
 	return *this;
 }
 
-/* ----------------------------------- functions ----------------------------------- */
 
 void	ClapTrap::attack(const std::string &target) {
 	if (this->_verbose)

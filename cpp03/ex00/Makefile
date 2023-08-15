@@ -6,20 +6,19 @@
 #    By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/14 15:14:58 by nbeaufil          #+#    #+#              #
-#    Updated: 2023/08/15 19:05:09 by nbeaufil         ###   ########.fr        #
+#    Updated: 2023/08/14 15:16:19 by nbeaufil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC =	main.cpp			\
-		ClapTrap.cpp		\
-		ScavTrap.cpp
+		ClapTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 CC = g++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = ScavTrap
+NAME = ClapTrap
 
 all: $(NAME)
 
