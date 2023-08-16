@@ -6,11 +6,12 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 15:14:07 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/16 09:42:59 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/08/16 09:51:04 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
@@ -26,14 +27,25 @@ int	main(void)
 	a.takeDamage(1);
 
 	std::cout << "----------------------------------"<< std::endl;
-	ScavTrap	robot("ROBOT-2.0");
+	ScavTrap	b("ROBOT-2.0");
 
-	robot.attack("your mom");
-	robot.attack("a guy");
-	robot.takeDamage(45);
-	robot.takeDamage(62);
-	robot.takeDamage(36);
-	robot.attack("an apple");
-	robot.guardGate();
+	b.attack("your mom");
+	b.attack("a guy");
+	b.takeDamage(45);
+	b.takeDamage(62);
+	b.takeDamage(36);
+	b.attack("an apple");
+	b.guardGate();
+
+	std::cout << "----------------------------------"<< std::endl;
+	FragTrap	c("Karl Marx");
+
+	c.attack("your mom");
+	c.attack("a guy");
+	c.takeDamage(45);
+	c.takeDamage(62);
+	c.takeDamage(36);
+	b.attack("an apple");
+	c.highFivesGuys();
 	return (0);
 }
