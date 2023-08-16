@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 15:14:07 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/16 11:44:27 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/08/16 12:15:07 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	main(void)
 {
-	/*
 	ClapTrap	a("gigaChad");
 
 	a.attack("mob 1");
@@ -47,7 +46,19 @@ int	main(void)
 	c.takeDamage(36);
 	b.attack("an apple");
 	c.highFivesGuys();
-	*/
+
+	std::cout << "----------------------------------"<< std::endl;
 	DiamondTrap	d("Zemmour");
+	DiamondTrap z(d);
+
+	d.attack("your mom");
+	d.attack("a guy");
+	d.takeDamage(45);
+	d.takeDamage(62);
+	d.takeDamage(36);
+	d.attack("an apple");
+	d.highFivesGuys();
+
+	d.whoAmI();
 	return (0);
 }
