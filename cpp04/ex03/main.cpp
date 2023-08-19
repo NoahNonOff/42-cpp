@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 14:50:56 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/19 15:41:59 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/08/19 16:36:45 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include "cure.hpp"
 
 int main()
-{
+    {
     IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
@@ -35,12 +35,22 @@ int main()
     ICharacter* bob = new Character("bob");
 
     me->use(0, *bob);
-    // -> to fix
-    me->use(1, *bob); // don't work
+    me->use(1, *bob);
+
+    AMateria    *trash;
+    ICharacter* Andrea = new Character("Andrea");
+
+    trash = me->getMateria(0);
+    me->unequip(0);
+
+    me->use(0, *Andrea);
+    me->use(1, *Andrea);
 
     delete bob;
     delete me;
     delete src;
+    delete Andrea;
+    delete trash;
 
     return 0;
 }

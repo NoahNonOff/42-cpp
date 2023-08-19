@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 14:27:02 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/19 15:35:53 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/08/19 16:36:33 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ ICharacter::~ICharacter() {}
 /* ------------------------------ get & set ------------------------------ */
 
 std::string const	&Character::getName() const { return this->_name; }
+
+AMateria    *Character::getMateria(const int idx) const { return this->_inventory[idx]; }
 
 /* ------------------------------ canonique ------------------------------ */
 
@@ -66,7 +68,6 @@ void	Character::equip(AMateria* m) {
 
 void	Character::unequip(int idx) {
 	if (this->_inventory[idx]) {
-		delete this->_inventory[idx]; // to remove
 		this->_inventory[idx] = NULL;
 
 	}

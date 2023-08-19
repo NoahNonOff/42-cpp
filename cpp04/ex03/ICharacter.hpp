@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 14:21:16 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/19 14:56:17 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/08/19 16:36:12 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class ICharacter
 {
 	public:
 		virtual ~ICharacter();
+		virtual AMateria    *getMateria(const int idx) const = 0;
 		virtual	std::string const	&getName() const = 0;
 		virtual void	equip(AMateria *m) = 0;
 		virtual void	unequip(int idx) = 0;
