@@ -20,7 +20,7 @@ CC = g++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = violence
+NAME = brain_test
 
 all: $(NAME)
 
