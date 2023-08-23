@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 16:50:05 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/19 17:18:24 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/08/23 16:14:18 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,16 @@ class Bureaucrat
 
 		std::string	getName(void) const;
 		int			getGrade(void) const;
+
+		// exception class
+		class GradeTooHighException : public std::exception {
+			public:
+				virtual const char *what() const throw();
+		};
+		class GradeTooLowException : public std::exception {
+			public:
+				virtual const char *what() const throw();
+		};
 };
 
 std::ostream	&operator<<(std::ostream &o, Bureaucrat const &i);
