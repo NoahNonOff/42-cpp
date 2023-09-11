@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 12:12:23 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/24 12:49:35 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/09/11 10:51:40 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ std::ostream &operator<<(std::ostream &o, AForm const &i) {
 void	AForm::beSigned(Bureaucrat const &bob) {
 	if (bob.getGrade() > _toSign)
 		throw AForm::GradeTooLowException();
+	else if (this->getSignature())
+		throw std::logic_error("[AForm] error: Form already signed");
 	else
 		_signature = true;
 }

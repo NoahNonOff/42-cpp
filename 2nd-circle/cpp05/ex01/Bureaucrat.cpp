@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 16:50:08 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/23 17:57:43 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/09/11 10:47:52 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ std::ostream &operator<<(std::ostream &o, Bureaucrat const &i) {
 }
 
 void	Bureaucrat::upGrade() {
-	if ((_grade + 1) < 1)
+	if ((_grade - 1) < 1)
 		throw Bureaucrat::GradeTooHighException();
 	else
 		_grade--;
@@ -66,7 +66,7 @@ void	Bureaucrat::signForm(Form &form) {
 	try {
 		form.beSigned(*this);
 		std::cout << _name << " signed " << form.getName() << std::endl;
-	} catch (Form::GradeTooLowException &error) {
+	} catch (std::exception &error) {
 		std::cout << _name << " couldn't sign " << form.getName() << \
 		" because: " << error.what() << std::endl;
 	}

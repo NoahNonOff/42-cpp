@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 16:50:08 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/23 16:54:00 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/09/11 10:33:59 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ std::ostream &operator<<(std::ostream &o, Bureaucrat const &i) {
 }
 
 void	Bureaucrat::upGrade() {
-	if ((_grade + 1) < 1)
+	if ((_grade - 1) < 1)
 		throw Bureaucrat::GradeTooHighException();
 	else
 		_grade--;

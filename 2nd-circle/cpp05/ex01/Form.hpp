@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 12:12:21 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/23 17:53:53 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/09/11 10:37:16 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Form
 	private:
 		const std::string	_name;
 		bool				_signature;
-		int					_toSign;
-		int					_toExecute;
+		const int			_toSign;
+		const int			_toExecute;
 
 	public:
 		Form();

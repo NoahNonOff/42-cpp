@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 06:32:07 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/23 18:00:25 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/09/11 10:48:13 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,9 @@ int	main(void)
 	Bureaucrat	michel("michel", 3);
 
 	std::cout << michel << form5;
+	michel.signForm(form5);
+	std::cout << form5;
+
 	michel.signForm(form5);
 	std::cout << form5;
 

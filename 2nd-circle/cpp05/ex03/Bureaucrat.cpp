@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 16:50:08 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/24 13:29:15 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/09/11 10:50:27 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ std::ostream &operator<<(std::ostream &o, Bureaucrat const &i) {
 }
 
 void	Bureaucrat::upGrade() {
-	if ((_grade + 1) < 1)
+	if ((_grade - 1) < 1)
 		throw Bureaucrat::GradeTooHighException();
 	else
 		_grade--;
@@ -66,7 +66,7 @@ void	Bureaucrat::signForm(AForm &form) {
 	try {
 		form.beSigned(*this);
 		std::cout << _name << " signed " << form.getName() << std::endl;
-	} catch (AForm::GradeTooLowException &error) {
+	} catch (std::exception &error) {
 		std::cout << _name << " couldn't sign " << form.getName() << \
 		" because: " << error.what() << std::endl;
 	}
@@ -77,7 +77,7 @@ void		Bureaucrat::executeForm(AForm &form) {
 		try {
 			form.execute(*this);
 			std::cout << _name << " executed " << form.getName() << std::endl;
-		} catch (AForm::GradeTooLowException &error) {
+		} catch (std::exception &error) {
 			std::cout << _name << " couldn't execute " << form.getName() << \
 			" because: " << error.what() << std::endl;
 		}

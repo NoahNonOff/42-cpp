@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 18:09:22 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/08/24 14:09:36 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/09/11 10:52:24 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int	main(void)
 	odin.signForm(form4);
 	std::cout << form4;
 	odin.executeForm(form4);
+	odin.signForm(form4);
 
 	return 0;
 }
