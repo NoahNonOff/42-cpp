@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:10:19 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/09/11 14:49:51 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/09/14 11:23:31 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ inline bool	exist(std::string const &name) {
 	std::ifstream	f(name.c_str());
 	return f.good();
 }
-
-// std::ifstream
 
 int	main(int ac, char *av[]) {
 
@@ -37,6 +35,6 @@ int	main(int ac, char *av[]) {
 		std::cerr << "error: file issue: \"" << av[1] << "\"" << std::endl;
 		return 2;
 	}
-	std::map<std::string, double>	map;
+	bitExchange(av[1]); 
 	return 0;
 }
