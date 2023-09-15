@@ -6,7 +6,7 @@
 /*   By: nbeaufil <nbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:10:30 by nbeaufil          #+#    #+#             */
-/*   Updated: 2023/09/14 11:23:33 by nbeaufil         ###   ########.fr       */
+/*   Updated: 2023/09/14 12:06:18 by nbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ bool	isDouble(std::string const &str) {
 }
 
 bool	isOverflow(std::string const &str) {
+	if (std::string::npos != str.find("."))
+		return false;
 	double	num = stod(str);
 	std::stringstream	stream;
 
